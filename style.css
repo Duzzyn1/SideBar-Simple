@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #000000;
+  color: #ffffff;
+  font-family: sans-serif;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  height: 24px;
+}
+
+li {
+  list-style-type: none;
+  padding: 0.3em;
+}
+
+li:hover {
+  background: #2F3336;
+  border-radius: 16px;
+}
+
+.container__menu {
+  border-bottom: 1px solid #2F3336;
+  padding: 1em 0;
+}
+
+.container__menu-items {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-left: 1em;
+}
+
+.container__menu-items--screen {
+  display: none;
+}
+
+.container__menu-items>h2 {
+  font-size: 14px;
+}
+
+.container__content>h1 {
+  font-size: 16px;
+  margin-left: 1em;
+  padding: 1em 0;
+}
+
+
+.container__menu-open--list {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  height: 100vh;
+}
+
+.perfil {
+  height: 100%;
+}
+
+.image__perfil {
+  border-radius: 30px;
+}
+
+
+li>a {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 14px;
+}
+
+.close {
+  font-size: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .container__menu {
+    position: fixed;
+    border: none;
+    width: calc(10% - 20px);
+    padding: 0;
+  }
+
+  .container__menu-items {
+    display: none;
+  }
+
+  .container__menu-items--screen {
+    display: flex;
+    width: 100%;
+  }
+
+  .image__perfil {
+    width: 30px;
+    height: 30px;
+  }
+
+  .container__menu-desc {
+    display: none;
+  }
+
+  .container__menu-items--links {
+    border-right: 1px solid #2F3336;
+    padding: 1em 0;
+    height: 100vh;
+  }
+
+  .container__content {
+    position: absolute;
+    left: 13%;
+  }
+
+  .container__content > h1 {
+    padding: 0.5em;
+    margin: 1em 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container__menu {
+    width: 20%;
+  }
+
+  .container__menu-items--links {
+    width: 100%;
+  }
+
+  .container__menu-items--links > li {
+    margin-left: 0.5em;
+  }
+
+  .container__menu-desc {
+    display: block;
+  }
+
+  .container__content {
+    left: 20%;
+  }
+
+  .container__content > h1 {
+    font-size: 26px;
+  }
+
+  li {
+    margin: 1em 0;
+  }
+
+  li>a {
+    font-size: 20px;
+  }
+}
